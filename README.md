@@ -14,8 +14,15 @@ This is a BTC donation based project, the planned stages and goals:
 3. (20 BTC) Opensource, I will upload the source, the compile and run scripts
 4. Suggest a new goal in forum
 
+My BTC address for donations:
+1GgnBSzLq6DioYS4haPSx6gZCeL9KMUYFW
+
 Performance:
+
 Ubuntu 12.04
+
 GTX-590: 260 MH/s
+
 GTX-690: 230 MH/s
+
 Card was not overclocked, no lag, etc
