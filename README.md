@@ -5,7 +5,7 @@ Optimalized CUDA version of the original rpcminer
 
 15-30% better mining performance compared to the original version.
 
-Optimalizaed for Fermi (GTX-4xx-5xx) and Kepler (GTX-6xx) Nvidia cards.
+Optimalized for Fermi (GTX-4xx-5xx) and Kepler (GTX-6xx) Nvidia cards.
 
 Legacy or newer card support will come later
 
