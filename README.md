@@ -14,7 +14,7 @@ This is a BTC donation based project, the planned stages and goals:
 1. (5 BTC) Linux Private Beta, the optimalized binary will be available for 20 beta tester for more information see project wiki page (later)
 2. (10 BTC) Windows Private Beta, the optimalized binary will be available for 20 beta tester for more information see project wiki page (later)
 3. (20 BTC) OpenSource, I will upload the source, the compile and run scripts and a probably usefull user documentation. All issues during the beta stage will be fixed.
-4. Suggest a new goal in forum (later)
+4. Suggest a new goal in forum ( https://bitcointalk.org/index.php?topic=215958 )
 
 My BTC address for donations:
 1GgnBSzLq6DioYS4haPSx6gZCeL9KMUYFW
