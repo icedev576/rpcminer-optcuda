@@ -2,9 +2,9 @@ rpcminer-optcuda
 ================
 
 Optimalized CUDA version of the rpcminer:
-(see: https://github.com/Ang3lus/rpcminer-mod and https://github.com/psychocoder-germany/rpcminer-mod
+(see: https://github.com/Ang3lus/rpcminer-mod and https://github.com/psychocoder-germany/rpcminer-mod)
 
-15-30% better mining performance compared to the original version.
+15-30% better mining performance compared to the original version (puddinpop's miner).
 
 Optimalized for Fermi (GTX-4xx-5xx) and Kepler (GTX-6xx) Nvidia cards.
 
