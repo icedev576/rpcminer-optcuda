@@ -24,7 +24,9 @@ The planned stages and goals:
 6. Suggest a new goal in forum ( https://bitcointalk.org/index.php?topic=215958 )
 
 My BTC address for donations:
+
 1GgnBSzLq6DioYS4haPSx6gZCeL9KMUYFW
+----------------------------------
 
 Performance:
 
