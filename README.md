@@ -14,6 +14,8 @@ USE Cuda toolkit 4.2 and not the 5.0! It is very important!
 ===========================================================
 https://developer.nvidia.com/cuda-toolkit-42-archive
 
+Please read the following files: README, README.md, HOW-TO. Thanks
+
 The planned stages and goals:
 
 1. OpenSource (see the original version for compilation help)
