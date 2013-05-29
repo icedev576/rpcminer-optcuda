@@ -1,0 +1,129 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_CONFIG DIALOGEX 0, 0, 258, 238
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Bitcoin Screensaver Configuration"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,65,218,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,140,218,50,14
+    EDITTEXT        IDC_WORKREFRESHMS,109,15,60,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_URL,109,31,125,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_USERNAME,109,47,125,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PASSWORD,109,63,125,14,ES_AUTOHSCROLL
+    LTEXT           "Work Refresh (ms)",IDC_STATIC,25,15,61,8
+    LTEXT           "URL",IDC_STATIC,25,31,14,8
+    LTEXT           "User Name",IDC_STATIC,25,47,36,8
+    LTEXT           "Password",IDC_STATIC,25,63,32,8
+    LTEXT           "Stats URL",IDC_STATIC,25,79,32,8
+    GROUPBOX        "GPU Mining Parameters",IDC_STATIC,7,114,244,97
+    EDITTEXT        IDC_STATSURL,109,79,125,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_THREADSCPU,109,95,60,14,ES_AUTOHSCROLL
+    LTEXT           "Threads (CPU)",IDC_STATIC,25,95,48,8
+    EDITTEXT        IDC_GPU,109,125,60,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PLATFORM,109,141,60,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_AGGRESSION,109,157,60,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_GRID,109,173,60,14,ES_AUTOHSCROLL
+    LTEXT           "GPU",IDC_STATIC,25,125,14,8
+    LTEXT           "Aggression",IDC_STATIC,25,157,36,8
+    LTEXT           "Grid",IDC_STATIC,25,173,14,8
+    LTEXT           "Threads (GPU)",IDC_STATIC,25,189,48,8
+    LTEXT           "Platform (OpenCL only)",IDC_STATIC,25,141,76,8
+    EDITTEXT        IDC_THREADSGPU,109,189,60,14,ES_AUTOHSCROLL
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_CONFIG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 251
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 231
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_BITCOINICON         ICON                    "../rc/bitcoin.ico"
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

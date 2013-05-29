@@ -1,0 +1,100 @@
+This is a modification of puddinpop's miner.
+This modification will allow users to compile this miner with CUDA or Opencl support and install it in easly manner.
+
+*********************
+* RPC MINER CLIENT 
+*********************
+(ARGUMENTS MAY BE COMBINED WITH CUDA/OPENCL ARGUMENTS)
+RPC miner client arguments
+
+-url=http://example.com:8332
+	The URL of the RPC server.
+	
+-user=username
+	The username used to connect to the RPC server.
+	
+-password=password
+	The password used to connect to the RPC server.
+	
+-threads=x
+	Start this number of miner threads.  The default value is the number of cores
+	on your processor if using a CPU miner, or 1 if using a GPU miner.
+	
+-workrefreshms=xxxx
+	Work will be refreshed from the server this often.  Each thread that is 
+	started needs its own work.  The default value is 4000ms.  If you have a
+	fast miner, or are using lots of threads, you might want to reduce this.
+
+-statsurl=http://example.com/stats/json
+	The URL of a server that will respond with a json object of the server stats.
+	Currently, only slush's server stats are available.  The stats will be
+	printed by the client every minute.  Not specifying a url will result in no
+	stats being displayed.
+
+
+*********************
+* CUDA MINER
+*********************
+CUDA miner arguments
+
+-gpu=X
+	Turns on GPU processing on specific GPU device.  Indexes start at 0.  If you 
+	just use -gpu without =X it will pick the first device found.
+
+-aggression=X
+	Specifies how many hashes (2^(X-1)) per kernel thread will be calculated.  
+	The default is 6.  It starts at 1 and goes to 32, with each successive
+	number meaning double the number of hashes.  Sane values are 1 to 12 or
+	maybe 14 if you have some super card.
+
+-gpugrid=X
+	Specifies what the grid size of the kernel should be.  Useful for fine tuning 
+	hash rate.
+
+-gputhreads=X
+	Specifies how many threads per kernel invocation should run.  Useful for fine 
+	tuning hash rate.
+
+-port=X
+	Specifies the port that bitcoin will listen on.  (When run in GUI or daemon)
+
+-rpcport=X
+	Specifies the port that the rpc server will listen on.  (When run in GUI or daemon)
+
+
+
+*********************
+* OPENCL MINER
+*********************
+Make sure bitcoinmineropencl.cl is in the bitcoin working directory for the server and 
+rpc miner, and remotebitcoinmineropencl.cl for the remote miner.
+
+OpenCL miner arguments
+
+-platform=X
+	Use specific OpenCL platform at index X.  Indexes start at 0.  Default is 0.
+	
+-gpu=X
+	Turns on GPU processing on specific GPU device on specified platform.
+	Indexes start at 0.  If you just use -gpu without =X it will pick the first 
+	device found.
+
+-aggression=X
+	Specifies how many hashes (2^(X-1)) per kernel thread will be calculated.  
+	The default is 6.  It starts at 1 and goes to 32, with each successive
+	number meaning double the number of hashes.  Sane values are 1 to 12 or
+	maybe 14 if you have some super card.
+
+-gpugrid=X
+	Specifies what the grid size of the kernel should be.  Useful for fine tuning 
+	hash rate.
+
+-gputhreads=X
+	Specifies how many threads per kernel invocation should run.  Useful for fine 
+	tuning hash rate.
+
+-port=X
+	Specifies the port that bitcoin will listen on.  (When run in GUI or daemon)
+
+-rpcport=X
+	Specifies the port that the rpc server will listen on.  (When run in GUI or daemon)

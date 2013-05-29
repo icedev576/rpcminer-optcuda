@@ -1,0 +1,8 @@
+How to compile (tested only in Gentoo Linux):
+1. mkdir build
+2. cd build
+3. cmake ../ - This step will configure project for compilation. Any library that is not present in the system will be reported. If You don't have one of libraries just install them and repeat this step.
+4. (Optional) ccmake ./ - Change configuration options to compile CUDA or OpenCL support. You cannot build both at the same time. CUDa is the default.
+5. make
+6. make install - Miner is installed inside build directory in  cmake-rpcminer/rpcminer-cuda or ./cmake-rpcminer/rpcminer-opencl
+7. Copy everything from rpcminer-cuda or rpcminer-opencl directory somewhere in your location and You can start mining :)
