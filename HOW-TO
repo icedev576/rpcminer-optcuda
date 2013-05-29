@@ -1,4 +1,4 @@
-How to compile (tested only in Gentoo Linux):
+How to compile:
 1. mkdir build
 2. cd build
 3. cmake ../ - This step will configure project for compilation. Any library that is not present in the system will be reported. If You don't have one of libraries just install them and repeat this step.
@@ -6,3 +6,14 @@ How to compile (tested only in Gentoo Linux):
 5. make
 6. make install - Miner is installed inside build directory in  cmake-rpcminer/rpcminer-cuda or ./cmake-rpcminer/rpcminer-opencl
 7. Copy everything from rpcminer-cuda or rpcminer-opencl directory somewhere in your location and You can start mining :)
+
+Precombiled cubin are in the cmake-rpcminer directory, you can probably use it, so GOTO 12
+Otherway, follow this, to compile your own cubins:
+
+8. go to src/cuda
+10. compile with cuda toolkit 4.2 (not with 5.0!) cubin file to your architecture (sm_20 for GTX4xx-GTX5xx; sm_30 for GTX6xx):
+   /usr/local/cuda-4.2/bin/nvcc bitcoinminercuda.cu --cubin --ptxas-options=-v -arch=sm_20 -maxrregcount 63 -o bitcoinminercuda_20.cubin
+   /usr/local/cuda-4.2/bin/nvcc bitcoinminercuda.cu --cubin --ptxas-options=-v -arch=sm_30 -maxrregcount 63 -o bitcoinminercuda_30.cubin
+11. cp *.cubin ../../cmake-rpcminer/
+12. go back to cmake-rpcminer and start mining:
+./rpcminer -url=0.0.0.0:8332 -user=USER.worker1 -password=PWD -workrefreshms=4000 -gpu=0 -agression=8 -gpugrid=512 -gputhreads=1024&
