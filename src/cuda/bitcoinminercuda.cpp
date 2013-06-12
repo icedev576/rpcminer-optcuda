@@ -87,12 +87,18 @@ CUDARunner::CUDARunner()
 
             //create string:
 
+            printf("Compute version: %d.%d\n", major, minor);
 
 
-            if(major==3)
+            if( (major==3) && (minor=5) )
+			{
+				cubin="bitcoinminercuda_35.cubin";
+                printf(">Compute version: 3.5!\n");
+			}
+            else
+            if( (major==3) && (minor==0) )
 			{
 				cubin="bitcoinminercuda_30.cubin";
-
 			}
 			else if(major==2)
 			{
@@ -213,13 +219,21 @@ void CUDARunner::DeallocateResources()
 
 void CUDARunner::FindBestConfiguration()
 {
-	unsigned long lowb=128;
-	unsigned long highb=512;
+//	unsigned long lowb=128;
+//	unsigned long highb=512;
+//	unsigned long lowt=256;
+//	unsigned long hight=1024;
+//	unsigned long bestb=128;
+//	unsigned long bestt=256;
+
+    unsigned long lowb=1024;
+	unsigned long highb=1024;
+
 	unsigned long lowt=256;
 	unsigned long hight=1024;
-	unsigned long bestb=128;
-	unsigned long bestt=256;
 
+	unsigned long bestb=1024;
+	unsigned long bestt=256;
 
 	int offset=0;
 	void *ptr=0;
