@@ -10,9 +10,11 @@ Optimalized for Fermi (GTX-4xx-5xx) and Kepler (GTX-6xx) Nvidia cards.
 
 Legacy or newer card support will come later
 
-USE Cuda toolkit 4.2 and not the 5.0! It is very important!
+FOR (GTX-4xx-5xx) and Kepler (GTX-6xx)USE Cuda toolkit 4.2 and not the 5.0! It is very important!
 ===========================================================
 https://developer.nvidia.com/cuda-toolkit-42-archive
+
+Added support for hardwares with computing mode 3.5 (Titan, GTX-780), this requires the cuda 5.0!
 
 Please read the following files: README, README.md, HOW-TO. Thanks
 
