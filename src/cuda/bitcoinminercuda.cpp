@@ -85,37 +85,14 @@ CUDARunner::CUDARunner()
 				exit(0);
 			}
 
+            printf("Detected GPU Compute Version: %d.%d\n", major, minor);
+
             //create string:
+            char cubinFileName[100];
+            sprintf(cubinFileName, "bitcoinminercuda_%d%d.cubin", major, minor );
+            printf("Loading module: %s\n", cubinFileName);
 
-            printf("Compute version: %d.%d\n", major, minor);
-
-
-            if( (major==3) && (minor=5) )
-			{
-				cubin="bitcoinminercuda_35.cubin";
-                printf(">Compute version: 3.5!\n");
-			}
-            else
-            if( (major==3) && (minor==0) )
-			{
-				cubin="bitcoinminercuda_30.cubin";
-			}
-			else if(major==2)
-			{
-				cubin="bitcoinminercuda_20.cubin";
-
-			}
-			else if(major>1 || ( major==1 && minor>0))
-			{
-				cubin="bitcoinminercuda_11.cubin";
-			}
-			else
-			{
-				cubin="bitcoinminercuda_10.cubin";
-			}
-
-			printf("Loading module %s\n",cubin.c_str());
-			rval=cuModuleLoad(&m_module,cubin.c_str());
+            rval = cuModuleLoad( &m_module, cubinFileName );
 
 			if(rval!=CUDA_SUCCESS)
 			{
@@ -136,7 +113,6 @@ CUDARunner::CUDARunner()
             cuCtxSetCacheConfig( CU_FUNC_CACHE_PREFER_L1 );
 
 			printf("CUDA initialized\n");
-
 		}
 		else
 		{
